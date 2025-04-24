@@ -1,5 +1,6 @@
 import React from 'react';
 import { Chart } from 'react-google-charts';
+import './App.css';
 
 function App() {
   const data = [
@@ -12,12 +13,13 @@ function App() {
   ];
 
   const options = {
-    title: 'My Daily Activities',
+    title: '',
   };
 
   return (
-    <div style={{ width: '80%', margin: '50px auto' }}>
+    <div className="chart-container">
       <h2>Pie Chart Example (Google Charts)</h2>
+      <h3>My Daily Activities</h3>
       <Chart
         chartType="PieChart"
         data={data}
